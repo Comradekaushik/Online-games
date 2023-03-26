@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title: PyScript</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+
+<body style="background-color: rgb(7, 3, 43);color: rgb(243, 243, 247);">
+    
+    <!-- <py-script>
+        import datetime as dt
+        pyscript.write('today', dt.date.today().strftime('%A %B %d, %Y'))
+        a=int(input())
+        print(f"A is {a}")
+        b=int(input())
+        print(f"B is {b}")
+    </py-script>
+    <p>is this working my brother</p>
+    <py-script>
+        c=int(input())
+        print(f"{c} for sweetheart")
+    </py-script> -->
+    
+<div style="font-size: 30px;">
+<py-script>
+       import random
+
+print('Winning rules of the game ROCK PAPER SCISSORS are :\n'
+      + "Rock vs Paper -> Paper wins \n"
+      + "Rock vs Scissors -> Rock wins \n"
+      + "Paper vs Scissors -> Scissor wins \n")
+w=1
+
+ 
+while True:
+    print(f"Game no. {w}")
+    w=w+1
+    choice=int(input("Enter your choice :"))
+    while choice > 3 or choice <1:
+      
+      choice=int(input("Enter a valid choice please ☺"))
+    if choice == 1:
+        choice_name= 'Rock'
+    elif choice == 2:
+        choice_name= 'Paper'
+    elif choice == 3:
+        choice_name= 'Scissor'
+    print("Your choice was \n",choice_name)
+    comp_choice = random.randint(1,3)
+    comp_choice = random.randint(1,3)
+ 
+    if comp_choice == 1:
+        comp_choice_name = 'Rock'
+    elif comp_choice == 2:
+        comp_choice_name = 'Paper'
+    elif comp_choice==3:
+        comp_choice_name = 'Scissor'
+    print("And Computer choice was \n", comp_choice_name)
+    print(choice_name,'Vs',comp_choice_name)
+    
+    if choice == comp_choice:
+        print("It's a Draw",end="")
+        result="DRAW"
+        
+    elif choice==1 and comp_choice==2:
+        print('paper wins =>',end="")
+        result='Paper'
+    elif choice==2 and comp_choice==1:
+        print('paper wins =>',end="")
+        result='Paper'
+         
+       
+    if choice==1 and comp_choice==3:
+        print('Rock wins =>\n',end= "")
+        result='Rock'
+    elif choice==3 and comp_choice==1:
+        print('Rock wins =>\n',end= "")
+        result='Rock'
+         
+    if choice==2 and comp_choice==3:
+        print('Scissors wins =>',end="")
+        result='Scissor'
+    elif choice==3 and comp_choice==2:
+        print('Scissors wins =>',end="")
+        result='Rock'
+     
+    if result == 'DRAW':
+        print("<== Its a tie ==>")
+        print("   _   ")
+        print("   _   ")
+        print("   _   ")
+    if result == choice_name:
+        print("<== User wins ==>")
+        print("   _   ")
+        print("   _    ")
+    elif result == comp_choice_name:
+        print("<== Computer wins ==>")
+        print("   _    ")
+        print("   _   ")
+    <!-- print("Do you want to play again? (Y/N)") -->
+    print("  End of the line  ")
+    
+    ans = int(input())
+    if ans == 111:
+        break
+
+print("Thanks for playing")
+
+
+    </py-script>
+</div>
+    <p style="font-family: Georgia, 'Times New Roman', Times, serif;font-size: 30px;">you already know the rules</p>
+    <img src="stalin1.jpg" alt="stalin the conqueror" width="500px">
+</body>
+
+</html>
